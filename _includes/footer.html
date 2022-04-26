@@ -20,14 +20,14 @@
         {% capture _platform %}
           <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
         {% endcapture %}
-        with
-        love.
 
         
         {{ site.data.locales[lang].meta
-          | default: 'Powered by :PLATFORM with love.'
+          | default: 'Powered by :PLATFORM '
           | replace: ':PLATFORM', _platform 
         }}
+
+        with love.
 
       </p>
     </div>
