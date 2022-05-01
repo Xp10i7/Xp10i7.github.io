@@ -169,7 +169,7 @@ Except `/test`, we don't have the type of intel we can work with for this easy l
 
 ![test page](/assets/Tech_Supp0rt/test.png)
 
-Till now, we have done decent exploring in this wordpress site. Now time to do some more recon!
+Till now, we have done decent exploring in this wordpress site. Now, time to do some more recon!
 
 ### Enum4linux
 
