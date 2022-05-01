@@ -401,8 +401,6 @@ getting file \enter.txt of size 273 as enter.txt (0.4 KiloBytes/sec) (average 0.
 ```
 We got an `enter.txt` file. Now, let us take a look into it!
 
-### enter.txt
-
 ```bash
 cat enter.txt   
 GOALS
