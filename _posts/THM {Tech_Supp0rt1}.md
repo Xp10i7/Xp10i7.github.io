@@ -729,4 +729,4 @@ root@TechSupport:~#
 ```
 That's it folks, this was all about the Tech_Support box.</br>
 
-Thank you so much for being till the end. See you guys next time..!
+Thank you so much for being till the end. See you guys next time...!
