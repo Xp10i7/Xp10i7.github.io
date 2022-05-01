@@ -3,13 +3,7 @@ title: THM {Tech_Supp0rt1}
 categories: [Tryhackme]
 tags: [tryhackme, rce, searchsploit, wordpress, wpscan, nmap, smb, linux, smbclient, file upload, gobuster, nikto, smbmap, gtfobins]
 math: true
-
-image:
-  src:  /Xp10i7/Xp10i7.github.io/assets/Tech_Supp0rt/Thumbnail.jpg 
-  width: 1000   # in pixels
-  height: 400   # in pixels
-  alt: Tech Support Scam
-
+image: "https://github.com/Xp10i7/Xp10i7.github.io/assets/Tech_Supp0rt/Thumbnail.jpg"
 ---
 
 # Tech_Supp0rt: 1
