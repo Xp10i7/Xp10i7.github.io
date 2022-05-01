@@ -5,7 +5,7 @@ tags: [tryhackme, rce, searchsploit, wordpress, wpscan, nmap, smb, linux, smbcli
 math: true
 
 image:
-  src: /assets/Tech_Supp0rt/Thumbnail.jpg
+  src:  /Xp10i7/Xp10i7.github.io/assets/Tech_Supp0rt/Thumbnail.jpg 
   width: 1000   # in pixels
   height: 400   # in pixels
   alt: Tech Support Scam
