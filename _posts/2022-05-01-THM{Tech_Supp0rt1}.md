@@ -598,9 +598,9 @@ scamsite@TechSupport:/var/www/html/wordpress$ whoami
 whoami
 scamsite
 ```
-Yes! We got in! Now it's time for some privelege escalation!!
+Yes! We got in! Now it's time for some privilege escalation!!
 
-## Privelege Escalation
+## Privilege Escalation
 
 We can do two things here either we can upload linpeas or we can do some manual work ourselves. I tried both methods, linpeas was taking much time so I skipped it.
 
