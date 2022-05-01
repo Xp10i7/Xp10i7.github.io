@@ -3,7 +3,7 @@ title: THM {Tech_Supp0rt1}
 categories: [Tryhackme]
 tags: [tryhackme, rce, searchsploit, wordpress, wpscan, nmap, smb, linux, smbclient, file upload, gobuster, nikto, smbmap, gtfobins]
 math: true
-image: "https://i.imgur.com/JtjyiaA.png"
+image: https://i.imgur.com/JtjyiaA.png
 ---
 # Tech_Supp0rt: 1
 ## About The Room
