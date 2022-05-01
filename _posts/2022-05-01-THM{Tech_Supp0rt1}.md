@@ -4,7 +4,7 @@ categories: [Tryhackme]
 tags: [tryhackme, rce, searchsploit, wordpress, wpscan, nmap, smb, linux, smbclient, file upload, gobuster, nikto, smbmap, gtfobins]
 math: true
 image:
-  src: https://i.imgur.com/JtjyiaA.png
+  src: /assets/Tech_Supp0rt/Thumbnail.png
   width: 1000   # in pixels
   height: 400   # in pixels
   alt: Tech Support Scam
