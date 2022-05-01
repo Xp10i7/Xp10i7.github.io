@@ -1,6 +1,5 @@
 ---
 title: THM {Tech_Supp0rt1}
-date: 2022-05=01 14:22:00 +05:30
 categories: [Tryhackme]
 tags: [tryhackme, rce, searchsploit, wordpress, wpscan, nmap, smb, linux, smbclient, file upload, gobuster, nikto, smbmap, gtfobins]
 math: true
