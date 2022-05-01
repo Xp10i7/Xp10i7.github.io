@@ -1,5 +1,5 @@
 ---
-title: THM {Tech_Supp0rt1}
+title: THM - Tech_Supp0rt:1
 categories: [Tryhackme]
 tags: [tryhackme, rce, searchsploit, wordpress, wpscan, nmap, smb, linux, smbclient, file upload, gobuster, nikto, smbmap, gtfobins]
 math: true
