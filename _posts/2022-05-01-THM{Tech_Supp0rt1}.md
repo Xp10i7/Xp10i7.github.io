@@ -1,10 +1,14 @@
 ---
-title: THM {Tech_Supp0rt:1}
-author: 54ny4m Xp10i7
+title: THM {Tech_Supp0rt1}
+date: 2022-05=01 14:06:00 +0530
 categories: [Tryhackme]
 tags: [tryhackme, rce, searchsploit, wordpress, wpscan, nmap, smb, linux, smbclient, file upload, gobuster, nikto, smbmap, gtfobins]
 math: true
-image: "https://i.imgur.com/JtjyiaA.png"
+image:
+  src: "https://i.imgur.com/JtjyiaA.png"
+  width: 1000
+  height: 400
+  alt: Tech_Support_Scam
 ---
 # Tech_Supp0rt: 1
 ## About The Room
